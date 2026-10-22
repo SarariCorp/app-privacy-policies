@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy Template</title>
-  <meta name="description" content="Reusable privacy policy template for SarariCorp apps.">
+  <title>SarariCorp App Privacy Policy Starter Template</title>
+  <meta name="description" content="Starter template for building a SarariCorp app privacy page at /apps/&lt;app-slug&gt;/ with a self-contained logo asset.">
   <meta name="robots" content="noindex,follow">
   <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="container">
       <nav class="top-nav" aria-label="Main navigation">
-        <a class="brand" href="../../">SarariCorp Privacy</a>
+        <a class="brand" href="../../" aria-label="Back to SarariCorp Privacy Center">SarariCorp <span class="brand-subtitle">Privacy Center</span></a>
         <ul class="nav-links">
           <li><a href="../../#apps">Apps</a></li>
           <li><a href="../example-app/">Example</a></li>
@@ -23,10 +23,22 @@
   </header>
   <main id="main-content" class="container section">
     <h1>Reusable App Policy Template</h1>
+    <img class="app-logo" src="./logo.svg" alt="Replaceable placeholder logo for template app">
     <article class="content-panel">
-      <p>Copy <code>/apps/example-app/</code> to <code>/apps/&lt;your-app-slug&gt;/</code> and replace all bracketed placeholders in the page content.</p>
-      <p>The example policy includes safe placeholder text and complete sections expected by most app-store policy disclosures.</p>
+      <p>Copy <code>/apps/example-app/</code> to <code>/apps/&lt;your-app-slug&gt;/</code> to keep each app folder self-contained.</p>
+      <p>Each app folder should include:</p>
+      <ul>
+        <li><code>index.html</code> (the policy page)</li>
+        <li><code>logo.svg</code> or <code>logo.png</code> (replaceable app logo asset)</li>
+      </ul>
+      <p>All bracketed fields in the example policy are required placeholders and must be customized before publication.</p>
     </article>
   </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Starter structure for SarariCorp app privacy-policy folders.</p>
+      <p><a href="../../">Back to privacy center</a></p>
+    </div>
+  </footer>
 </body>
 </html>

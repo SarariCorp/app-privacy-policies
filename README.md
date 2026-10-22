@@ -1,22 +1,34 @@
 # SarariCorp App Privacy Policies
 
-This repository hosts a static, GitHub Pages-ready website for Android app privacy policies.
+Static GitHub Pages website for publishing per-app privacy policies with a premium SarariCorp corporate black-space theme.
 
-## Purpose
+## What this repository provides
 
-- Publish one privacy policy page per app.
-- Keep policy links stable and review-friendly for Google Play submissions.
-- Maintain a simple, dependency-free static site (no backend, no build step).
+- A branded SarariCorp privacy center landing page (`/`).
+- One self-contained folder per app under **`/apps/<app-slug>/`**.
+- A reusable starter template in `apps/_template/`.
+- Dependency-free static hosting (no backend, no build tooling required).
 
-## URL convention
+## Corporate black-space theme structure
 
-This repository uses the **`/apps/<app-slug>/`** convention.
+The shared theme lives in `assets/css/styles.css` and includes:
 
-Examples:
-- Landing page: `https://<owner>.github.io/app-privacy-policies/`
-- App policy: `https://<owner>.github.io/app-privacy-policies/apps/example-app/`
+- Pure/near-black cosmic background treatment.
+- High-contrast typography and polished cards/borders.
+- Responsive navigation and CTA styles.
+- Visible keyboard focus states.
+- Reduced-motion support with `prefers-reduced-motion`.
+- Skip-link support for keyboard/screen-reader users.
 
-All links and assets use **relative paths** so the site works from GitHub Pages project subpaths.
+## Branding and logo replacement
+
+Current branding uses a **text-based SarariCorp wordmark placeholder** (no fabricated official logo).
+
+When the official logo is ready:
+
+1. Update header/hero branding in `/index.html`.
+2. Replace each app logo placeholder file (`apps/<app-slug>/logo.svg` or `logo.png`).
+3. Keep alt text descriptive for accessibility.
 
 ## Folder structure
 
@@ -27,57 +39,87 @@ All links and assets use **relative paths** so the site works from GitHub Pages 
 ├── assets/
 │   └── css/styles.css
 ├── apps/
-│   ├── _template/index.html
-│   └── example-app/index.html
-└── index.html
+│   ├── _template/
+│   │   ├── index.html
+│   │   └── logo.svg
+│   └── example-app/
+│       ├── index.html
+│       └── logo.svg
+├── index.html
+└── README.md
 ```
 
-## Add a new app policy
+## App folder pattern (scales to future apps)
 
-1. Copy the example folder:
-   - From: `apps/example-app/`
-   - To: `apps/<your-app-slug>/`
-2. Edit `apps/<your-app-slug>/index.html`.
-3. Replace **all** placeholder fields in square brackets:
-   - `[REPLACE APP NAME]`
-   - `[REPLACE COMPANY NAME]`
-   - `[REPLACE FREE/PAID/SUBSCRIPTION]`
-   - `[REPLACE WITH EXACT DATA TYPES ...]`
-   - `[REPLACE CONTACT EMAIL]`
-   - `[REPLACE DATE]`
-4. Add a new card on `index.html` under “Available app policies” linking to `./apps/<your-app-slug>/`.
-5. Commit and push to `main` (the workflow deploys automatically).
+Each app folder should be self-contained:
 
-## Required customization before publishing
+- `apps/<app-slug>/index.html` → app privacy policy page
+- `apps/<app-slug>/logo.svg` (or `logo.png`) → app logo/placeholder asset
 
-Do **not** publish placeholder text. Every app page must be updated with real, accurate policy details for that specific app.
+### Add a new app policy
 
-## Local preview options
+1. Copy `apps/example-app/` to `apps/<your-app-slug>/`.
+2. Update `apps/<your-app-slug>/index.html` policy content.
+3. Replace `apps/<your-app-slug>/logo.svg` with your real app logo (or keep a clearly marked placeholder until available).
+4. Add/update an app card on root `index.html` linking to `./apps/<your-app-slug>/`.
 
-Because this is a static site, you can preview locally with any HTTP server:
+## Required privacy-policy customization fields
+
+`apps/example-app/index.html` is a template only. Replace **all** marked placeholders before publishing:
+
+- `[REPLACE APP NAME]`
+- `[REPLACE COMPANY NAME]`
+- `[REPLACE FREE/PAID/SUBSCRIPTION]`
+- `[REPLACE WITH EXACT DATA TYPES ...]`
+- `[REPLACE WITH SPECIFIC USES ...]`
+- `[REPLACE WITH ONLY THE SERVICES ACTUALLY USED ...]`
+- `[REPLACE WITH RETENTION PERIODS ...]`
+- `[REPLACE WITH APP-SPECIFIC CHILDREN PRIVACY STATEMENT.]`
+- `[REPLACE WITH REASONABLE TECHNICAL/ORGANIZATIONAL SAFEGUARDS USED.]`
+- `[REPLACE CONTACT EMAIL]`
+- `[REPLACE DATE]`
+
+Do not claim real data practices until these fields are accurately customized.
+
+## URL convention (GitHub Pages)
+
+This repo preserves the **`/apps/example-app/`** URL convention and uses relative paths so links/assets work on both root and nested pages.
+
+### Project site URLs (this repository)
+
+- Landing page: `https://<owner>.github.io/app-privacy-policies/`
+- Example app policy: `https://<owner>.github.io/app-privacy-policies/apps/example-app/`
+
+### User/organization site variant (if this repo is renamed to `<owner>.github.io`)
+
+- Landing page: `https://<owner>.github.io/`
+- Example app policy: `https://<owner>.github.io/apps/example-app/`
+
+## Local preview
 
 ```bash
 cd /path/to/app-privacy-policies
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000/`.
+Open: `http://localhost:8000/`
 
 ## GitHub Pages setup
 
-1. In GitHub, open repository **Settings → Pages**.
+1. Open repository **Settings → Pages**.
 2. Set **Source** to **GitHub Actions**.
-3. Ensure the workflow in `.github/workflows/deploy-pages.yml` is enabled.
-4. On push to `main` (or manual workflow dispatch), Pages deploys automatically.
+3. Ensure `.github/workflows/deploy-pages.yml` is enabled.
+4. Push to `main` (or use manual dispatch) to deploy.
 
-## Deployment workflow
+## Static deployment workflow
 
-- Workflow file: `.github/workflows/deploy-pages.yml`
+- Workflow: `.github/workflows/deploy-pages.yml`
 - Triggers:
-  - Pushes to `main`
-  - Manual dispatch (`workflow_dispatch`)
+  - push to `main`
+  - manual `workflow_dispatch`
 
 ## Manual steps after merge
 
-- Replace placeholder content in `apps/example-app/index.html` (or add real app folders).
-- Confirm Pages is enabled with **GitHub Actions** as source in repository settings.
+- Replace template placeholders with app-specific legal/privacy details.
+- Replace placeholder logo assets with official app logos when available.
+- Confirm Pages source remains **GitHub Actions**.

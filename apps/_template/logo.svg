@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Template app logo placeholder</title>
+  <desc id="desc">Replaceable logo placeholder for new app folders created from the template.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#070b17"/>
+      <stop offset="1" stop-color="#121d39"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#9ec2ff"/>
+      <stop offset="1" stop-color="#c9a4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" rx="20" fill="url(#bg)"/>
+  <rect x="56" y="54" width="66" height="72" rx="13" fill="#1d2b52" stroke="url(#line)" stroke-width="4"/>
+  <path d="M70 70h38M70 84h38M70 98h24" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
+  <text x="136" y="82" fill="#edf3ff" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">[APP NAME]</text>
+  <text x="136" y="112" fill="#b9c9e9" font-family="Segoe UI, Arial, sans-serif" font-size="13">logo.svg placeholder in each app folder</text>
+</svg>
