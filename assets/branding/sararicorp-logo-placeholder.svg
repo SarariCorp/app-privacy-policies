@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" viewBox="0 0 640 200" role="img" aria-labelledby="title desc">
+  <title id="title">SarariCorp logo placeholder</title>
+  <desc id="desc">Replace this placeholder with the official SarariCorp logo asset when available.</desc>
+  <rect width="640" height="200" rx="22" fill="#060915" stroke="#5e87c8" stroke-opacity="0.7"/>
+  <rect x="18" y="18" width="604" height="164" rx="14" fill="#0d1426" stroke="#9fc9ff" stroke-opacity="0.35" stroke-dasharray="8 8"/>
+  <text x="42" y="88" fill="#f5f8ff" font-size="42" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700">SarariCorp</text>
+  <text x="42" y="132" fill="#a9b9d9" font-size="26" font-family="Inter, Segoe UI, Arial, sans-serif">Official Logo Placeholder</text>
+  <text x="42" y="162" fill="#7d90b5" font-size="19" font-family="Inter, Segoe UI, Arial, sans-serif">Replace this file when the approved brand logo is available.</text>
+</svg>

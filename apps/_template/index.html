@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy Template</title>
-  <meta name="description" content="Reusable privacy policy template for SarariCorp apps.">
+  <title>App Privacy Policy Template | SarariCorp</title>
+  <meta name="description" content="Reusable SarariCorp app privacy-policy template with a self-contained app logo placeholder and required fields.">
   <meta name="robots" content="noindex,follow">
   <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
@@ -13,20 +13,59 @@
   <header class="site-header">
     <div class="container">
       <nav class="top-nav" aria-label="Main navigation">
-        <a class="brand" href="../../">SarariCorp Privacy</a>
+        <a class="brand" href="../../">
+          <span class="brand-wordmark" aria-hidden="true">SC</span>
+          <span class="brand-text"><strong>SarariCorp</strong><span>Privacy Policy Center</span></span>
+        </a>
         <ul class="nav-links">
+          <li><a href="../../">Home</a></li>
           <li><a href="../../#apps">Apps</a></li>
           <li><a href="../example-app/">Example</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main id="main-content" class="container section">
+    <p class="eyebrow">Starter template</p>
     <h1>Reusable App Policy Template</h1>
+    <p class="policy-meta">Copy this folder to create each new app policy route: <code>/apps/&lt;app-slug&gt;/</code>.</p>
+
+    <section class="content-panel" aria-label="Template app logo placeholder">
+      <div class="policy-intro">
+        <img class="app-logo" src="./app-logo-placeholder.svg" alt="App logo placeholder template. Replace with app logo in each app folder.">
+        <div>
+          <h2>Self-contained app folder requirement</h2>
+          <p class="lead">Each app folder must include both an <code>index.html</code> policy page and an app logo asset placeholder or final logo file.</p>
+          <p class="meta-note">When creating a new app route, copy this placeholder and rename/replace it with the app&apos;s approved logo asset.</p>
+        </div>
+      </div>
+    </section>
+
     <article class="content-panel">
-      <p>Copy <code>/apps/example-app/</code> to <code>/apps/&lt;your-app-slug&gt;/</code> and replace all bracketed placeholders in the page content.</p>
-      <p>The example policy includes safe placeholder text and complete sections expected by most app-store policy disclosures.</p>
+      <h2>Required placeholders to replace</h2>
+      <ul>
+        <li>[REPLACE APP NAME]</li>
+        <li>[REPLACE COMPANY NAME]</li>
+        <li>[REPLACE FREE/PAID/SUBSCRIPTION]</li>
+        <li>[REPLACE WITH EXACT DATA TYPES OR "No personal data is collected directly by the app."]</li>
+        <li>[REPLACE WITH SPECIFIC USES OR "Not applicable because no data is collected."]</li>
+        <li>[REPLACE WITH ONLY THE SERVICES ACTUALLY USED, such as analytics, ads, crash reporting, or none.]</li>
+        <li>[REPLACE WITH RETENTION PERIODS OR "No personal data is stored by us."]</li>
+        <li>[REPLACE WITH APP-SPECIFIC CHILDREN PRIVACY STATEMENT.]</li>
+        <li>[REPLACE WITH REASONABLE TECHNICAL/ORGANIZATIONAL SAFEGUARDS USED.]</li>
+        <li>[REPLACE CONTACT EMAIL]</li>
+        <li>[REPLACE DATE]</li>
+      </ul>
+      <p>After replacement, add the new app card on the landing page and keep all links relative for GitHub Pages project-site compatibility.</p>
     </article>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>SarariCorp template route for app privacy policies.</p>
+      <p><a href="../../">Back to privacy policy center</a></p>
+    </div>
+  </footer>
 </body>
 </html>
