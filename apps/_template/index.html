@@ -3,30 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy Template</title>
-  <meta name="description" content="Reusable privacy policy template for SarariCorp apps.">
+  <title>SarariCorp | App Policy Folder Template</title>
+  <meta name="description" content="Reusable SarariCorp app privacy policy folder template with required placeholders and logo asset pattern.">
   <meta name="robots" content="noindex,follow">
   <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="container">
       <nav class="top-nav" aria-label="Main navigation">
-        <a class="brand" href="../../">SarariCorp Privacy</a>
+        <a class="brand" href="../../" aria-label="SarariCorp homepage">
+          <span class="brand-mark">SARARICORP</span>
+          <span class="wordmark">Privacy Policy Center</span>
+        </a>
         <ul class="nav-links">
-          <li><a href="../../#apps">Apps</a></li>
-          <li><a href="../example-app/">Example</a></li>
+          <li><a href="../../#apps">App policies</a></li>
+          <li><a href="../example-app/">Example app</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main id="main-content" class="container section">
-    <h1>Reusable App Policy Template</h1>
+    <h1>Reusable app folder template</h1>
     <article class="content-panel">
-      <p>Copy <code>/apps/example-app/</code> to <code>/apps/&lt;your-app-slug&gt;/</code> and replace all bracketed placeholders in the page content.</p>
-      <p>The example policy includes safe placeholder text and complete sections expected by most app-store policy disclosures.</p>
+      <p>Use this structure for each app folder:</p>
+      <ul>
+        <li><code>apps/&lt;app-slug&gt;/index.html</code> &mdash; app-specific privacy policy page</li>
+        <li><code>apps/&lt;app-slug&gt;/logo.svg</code> (or <code>logo.png</code>) &mdash; app logo asset or clearly marked placeholder</li>
+      </ul>
+      <p>Fast start: copy <code>/apps/example-app/</code> to <code>/apps/&lt;your-app-slug&gt;/</code>, then replace every bracketed placeholder before publishing.</p>
     </article>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Template maintained by SarariCorp for consistent policy publishing.</p>
+      <p><a href="../../">Back to policy index</a></p>
+    </div>
+  </footer>
 </body>
 </html>

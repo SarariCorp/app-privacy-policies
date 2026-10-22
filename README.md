@@ -1,22 +1,45 @@
 # SarariCorp App Privacy Policies
 
-This repository hosts a static, GitHub Pages-ready website for Android app privacy policies.
+A dependency-free, static GitHub Pages site for SarariCorp app privacy policies.
 
-## Purpose
+## What this repository provides
 
-- Publish one privacy policy page per app.
-- Keep policy links stable and review-friendly for Google Play submissions.
-- Maintain a simple, dependency-free static site (no backend, no build step).
+- Corporate-styled landing page with a pure-black, space-inspired theme.
+- One self-contained folder per app at `/apps/<app-slug>/`.
+- Stable app-policy URLs for store submissions and user access.
+- Shared styles in `/assets/css/styles.css` with responsive, accessible defaults.
 
-## URL convention
+## Theme and branding structure
+
+- Current branding uses a **text-based SarariCorp wordmark** in header/footer copy.
+- Shared visual system lives in `/assets/css/styles.css`.
+- App cards and policy pages use polished gradients, high-contrast text, focus-visible states, and reduced-motion support.
+- A decorative starfield effect is included with motion-safe fallbacks.
+
+## Replacing SarariCorp and app logos later
+
+No official SarariCorp logo is embedded yet.
+
+- Keep the text wordmark or replace it in each page header when the official logo is ready.
+- Each app folder must include its own logo file:
+  - `apps/<app-slug>/logo.svg` (preferred) or `logo.png`
+- Current placeholders:
+  - `apps/example-app/logo.svg`
+  - `apps/_template/logo.svg`
+
+Replace the placeholder file in each app folder with the official app logo while preserving the same filename to avoid link updates.
+
+## URL convention (GitHub Pages project-site compatible)
 
 This repository uses the **`/apps/<app-slug>/`** convention.
 
-Examples:
-- Landing page: `https://<owner>.github.io/app-privacy-policies/`
-- App policy: `https://<owner>.github.io/app-privacy-policies/apps/example-app/`
+Examples for this repo (`app-privacy-policies`):
 
-All links and assets use **relative paths** so the site works from GitHub Pages project subpaths.
+- Landing page: `https://<owner>.github.io/app-privacy-policies/`
+- Example app policy: `https://<owner>.github.io/app-privacy-policies/apps/example-app/`
+- Any app policy: `https://<owner>.github.io/app-privacy-policies/apps/<app-slug>/`
+
+All links and assets use relative paths so they work from both root and nested app pages on project-site subpaths.
 
 ## Folder structure
 
@@ -27,57 +50,64 @@ All links and assets use **relative paths** so the site works from GitHub Pages 
 ├── assets/
 │   └── css/styles.css
 ├── apps/
-│   ├── _template/index.html
-│   └── example-app/index.html
+│   ├── _template/
+│   │   ├── index.html
+│   │   └── logo.svg
+│   └── example-app/
+│       ├── index.html
+│       └── logo.svg
 └── index.html
 ```
 
-## Add a new app policy
+## Add a new app folder and policy
 
 1. Copy the example folder:
    - From: `apps/example-app/`
    - To: `apps/<your-app-slug>/`
-2. Edit `apps/<your-app-slug>/index.html`.
-3. Replace **all** placeholder fields in square brackets:
-   - `[REPLACE APP NAME]`
-   - `[REPLACE COMPANY NAME]`
-   - `[REPLACE FREE/PAID/SUBSCRIPTION]`
-   - `[REPLACE WITH EXACT DATA TYPES ...]`
-   - `[REPLACE CONTACT EMAIL]`
-   - `[REPLACE DATE]`
-4. Add a new card on `index.html` under “Available app policies” linking to `./apps/<your-app-slug>/`.
-5. Commit and push to `main` (the workflow deploys automatically).
+2. Keep this self-contained app pattern:
+   - `apps/<your-app-slug>/index.html`
+   - `apps/<your-app-slug>/logo.svg` (or `logo.png`)
+3. Edit `apps/<your-app-slug>/index.html` and replace every placeholder.
+4. Add an app card in root `index.html` under “Available app policies” linking to `./apps/<your-app-slug>/`.
+5. Commit to `main` (Pages deploy workflow publishes automatically).
 
-## Required customization before publishing
+## Required policy customization fields (before publishing)
 
-Do **not** publish placeholder text. Every app page must be updated with real, accurate policy details for that specific app.
+Do **not** publish placeholders. At minimum replace all bracketed fields such as:
 
-## Local preview options
+- `[REPLACE APP NAME]`
+- `[REPLACE COMPANY NAME]`
+- `[REPLACE FREE/PAID/SUBSCRIPTION]`
+- `[REPLACE DATA TYPES COLLECTED ...]`
+- `[REPLACE CONTACT EMAIL]`
+- `[REPLACE DATE]`
 
-Because this is a static site, you can preview locally with any HTTP server:
+Also ensure third-party services, retention details, and children/privacy statements match the real app behavior.
+
+## Local preview
 
 ```bash
-cd /path/to/app-privacy-policies
+cd /home/runner/work/app-privacy-policies/app-privacy-policies
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000/`.
+Open `http://localhost:8000/app-privacy-policies/` if served above this folder, or `http://localhost:8000/` when serving this repository root directly.
 
 ## GitHub Pages setup
 
-1. In GitHub, open repository **Settings → Pages**.
+1. In GitHub, open **Settings → Pages**.
 2. Set **Source** to **GitHub Actions**.
-3. Ensure the workflow in `.github/workflows/deploy-pages.yml` is enabled.
-4. On push to `main` (or manual workflow dispatch), Pages deploys automatically.
+3. Ensure `.github/workflows/deploy-pages.yml` is enabled.
+4. Pushes to `main` (or manual `workflow_dispatch`) deploy automatically.
 
-## Deployment workflow
+## Static deployment workflow
 
 - Workflow file: `.github/workflows/deploy-pages.yml`
-- Triggers:
-  - Pushes to `main`
-  - Manual dispatch (`workflow_dispatch`)
+- Upload path: repository root (`.`)
+- Runtime: static files only (no backend, no secrets)
 
-## Manual steps after merge
+## Remaining manual steps after merge
 
-- Replace placeholder content in `apps/example-app/index.html` (or add real app folders).
-- Confirm Pages is enabled with **GitHub Actions** as source in repository settings.
+- Replace placeholder policy content with real app-specific legal text before publication.
+- Replace placeholder logo assets with official SarariCorp/app logos when available.
+- Verify final production URLs in Google Play Console or other distribution portals.
