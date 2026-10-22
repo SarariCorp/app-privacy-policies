@@ -1,113 +1,64 @@
-# SarariCorp App Privacy Policies
+# SarariCorp Privacy Policy Dashboard
 
-A dependency-free, static GitHub Pages site for SarariCorp app privacy policies.
+A dependency-free GitHub Pages site for publishing SarariCorp application privacy policies.
 
-## What this repository provides
+## Website purpose
 
-- Corporate-styled landing page with a pure-black, space-inspired theme.
-- One self-contained folder per app at `/apps/<app-slug>/`.
-- Stable app-policy URLs for store submissions and user access.
-- Shared styles in `/assets/css/styles.css` with responsive, accessible defaults.
+This repository only displays privacy policies. There is no add-app button, upload flow, admin panel, or user-submission form. New applications are added manually in the repository by creating a folder under `apps/`.
 
-## Theme and branding structure
+## Visual system
 
-- Current branding uses a **text-based SarariCorp wordmark** in header/footer copy.
-- Shared visual system lives in `/assets/css/styles.css`.
-- App cards and policy pages use polished gradients, high-contrast text, focus-visible states, and reduced-motion support.
-- A decorative starfield effect is included with motion-safe fallbacks.
+The dashboard uses a pure black, space-inspired technology theme with subtle star details, high-contrast typography, restrained neon accents, and responsive application cards. The current SarariCorp mark is a replaceable placeholder until the official logo is supplied.
 
-## Replacing SarariCorp and app logos later
-
-No official SarariCorp logo is embedded yet.
-
-- Keep the text wordmark or replace it in each page header when the official logo is ready.
-- Each app folder must include its own logo file:
-  - `apps/<app-slug>/logo.svg` (preferred) or `logo.png`
-- Current placeholders:
-  - `apps/example-app/logo.svg`
-  - `apps/_template/logo.svg`
-
-Replace the placeholder file in each app folder with the official app logo while preserving the same filename to avoid link updates.
-
-## URL convention (GitHub Pages project-site compatible)
-
-This repository uses the **`/apps/<app-slug>/`** convention.
-
-Examples for this repo (`app-privacy-policies`):
-
-- Landing page: `https://<owner>.github.io/app-privacy-policies/`
-- Example app policy: `https://<owner>.github.io/app-privacy-policies/apps/example-app/`
-- Any app policy: `https://<owner>.github.io/app-privacy-policies/apps/<app-slug>/`
-
-All links and assets use relative paths so they work from both root and nested app pages on project-site subpaths.
-
-## Folder structure
+## Structure
 
 ```text
 .
-├── .github/workflows/deploy-pages.yml
-├── .nojekyll
 ├── assets/
+│   ├── branding/sararicorp-mark.svg
 │   └── css/styles.css
 ├── apps/
 │   ├── _template/
-│   │   ├── index.html
-│   │   └── logo.svg
 │   └── example-app/
 │       ├── index.html
 │       └── logo.svg
-└── index.html
+├── index.html
+└── .github/workflows/deploy-pages.yml
 ```
 
-## Add a new app folder and policy
+## Add an app manually
 
-1. Copy the example folder:
-   - From: `apps/example-app/`
-   - To: `apps/<your-app-slug>/`
-2. Keep this self-contained app pattern:
-   - `apps/<your-app-slug>/index.html`
-   - `apps/<your-app-slug>/logo.svg` (or `logo.png`)
-3. Edit `apps/<your-app-slug>/index.html` and replace every placeholder.
-4. Add an app card in root `index.html` under “Available app policies” linking to `./apps/<your-app-slug>/`.
-5. Commit to `main` (Pages deploy workflow publishes automatically).
+1. Copy `apps/example-app/` or `apps/_template/` to `apps/<app-slug>/`.
+2. Keep `apps/<app-slug>/index.html` as the policy page.
+3. Add the app's logo as `apps/<app-slug>/logo.svg` or `logo.png`.
+4. Replace all policy placeholders with accurate, app-specific information.
+5. Add one application card to the root `index.html`, linking to `./apps/<app-slug>/` and using the folder logo.
+6. Commit the changes to `main`; the GitHub Pages workflow will publish them.
 
-## Required policy customization fields (before publishing)
+Each app policy is available at:
 
-Do **not** publish placeholders. At minimum replace all bracketed fields such as:
+```text
+https://<owner>.github.io/app-privacy-policies/apps/<app-slug>/
+```
 
-- `[REPLACE APP NAME]`
-- `[REPLACE COMPANY NAME]`
-- `[REPLACE FREE/PAID/SUBSCRIPTION]`
-- `[REPLACE DATA TYPES COLLECTED ...]`
-- `[REPLACE CONTACT EMAIL]`
-- `[REPLACE DATE]`
+## Branding
 
-Also ensure third-party services, retention details, and children/privacy statements match the real app behavior.
+Replace `assets/branding/sararicorp-mark.svg` with the official SarariCorp logo when available, preserving the filename or updating the image path in the site pages. Replace each app's local `logo.svg` with its official app logo.
+
+## Before publishing a policy
+
+Replace every bracketed placeholder, including the app name, company name, data collected, third-party services, retention and deletion details, children’s privacy statement, contact email, and last-updated date. Confirm the final content matches the real app and applicable legal/store requirements.
 
 ## Local preview
 
+From the repository root:
+
 ```bash
-cd /home/runner/work/app-privacy-policies/app-privacy-policies
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/app-privacy-policies/` if served above this folder, or `http://localhost:8000/` when serving this repository root directly.
+Then open `http://localhost:8000/`.
 
-## GitHub Pages setup
+## GitHub Pages
 
-1. In GitHub, open **Settings → Pages**.
-2. Set **Source** to **GitHub Actions**.
-3. Ensure `.github/workflows/deploy-pages.yml` is enabled.
-4. Pushes to `main` (or manual `workflow_dispatch`) deploy automatically.
-
-## Static deployment workflow
-
-- Workflow file: `.github/workflows/deploy-pages.yml`
-- Upload path: repository root (`.`)
-- Runtime: static files only (no backend, no secrets)
-
-## Remaining manual steps after merge
-
-- Replace placeholder policy content with real app-specific legal text before publication.
-- Replace placeholder logo assets with official SarariCorp/app logos when available.
-- Verify final production URLs in Google Play Console or other distribution portals.
+In repository **Settings → Pages**, select **GitHub Actions** as the source. The workflow deploys the static repository on pushes to `main` and supports manual dispatch.
