@@ -6,6 +6,7 @@
   <title>SarariCorp Privacy Policy Dashboard</title>
   <meta name="description" content="The SarariCorp privacy policy dashboard for published mobile application policies.">
   <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/png" href="./assets/branding/sararicorp-logo.png">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
@@ -13,8 +14,9 @@
   <header class="site-header">
     <div class="container top-nav">
       <a class="brand" href="./" aria-label="SarariCorp Privacy Policy Dashboard home">
-        <img class="brand-logo" src="./assets/branding/sararicorp-mark.svg" alt="">
-        <span><strong>SarariCorp</strong><small>Privacy Policy Dashboard</small></span>
+        <img class="brand-logo" src="./assets/branding/sararicorp-logo.png" alt="SarariCorp">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-subtitle">Privacy Policy Dashboard</span>
       </a>
       <span class="portal-status"><i aria-hidden="true"></i> Public policy portal</span>
     </div>
@@ -31,16 +33,21 @@
     <section class="container app-section" id="apps" aria-labelledby="apps-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Directory / 01</p>
+          <p class="eyebrow">Directory / Applications</p>
           <h2 id="apps-title">Application policies</h2>
         </div>
         <p class="section-note">Published policies are organized by application folder.</p>
       </div>
       <div class="app-grid">
-        <a class="app-card" href="./apps/example-app/">
-          <div class="app-card-top"><img src="./apps/example-app/logo.svg" alt="Example App logo"><span class="card-index">01</span></div>
-          <div class="app-card-body"><p class="card-kicker">Application</p><h3>Example App</h3><p>Privacy policy template awaiting app-specific publishing details.</p><span class="card-link">View policy <b aria-hidden="true">↗</b></span></div>
-        </a>
+        <div class="empty-state">
+          <div class="empty-state-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Awaiting Application Policy</h3>
+          <p>Ready to list official SarariCorp applications. New application policies will be published here.</p>
+        </div>
       </div>
     </section>
 
@@ -51,6 +58,14 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-content"><div class="footer-brand">SARARICORP <span>/ PRIVACY</span></div><p>© 2026 SarariCorp. Privacy disclosures for mobile applications.</p></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img class="footer-logo" src="./assets/branding/sararicorp-logo.png" alt="SarariCorp">
+        <span>/ PRIVACY</span>
+      </div>
+      <p>© 2026 SarariCorp. Privacy disclosures for mobile applications.</p>
+    </div>
+  </footer>
 </body>
 </html>

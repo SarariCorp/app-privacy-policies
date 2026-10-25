@@ -21,11 +21,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .skip-link:focus { left: 12px; }
 .site-header { border-bottom: 1px solid var(--line); background: rgba(3,3,3,.82); backdrop-filter: blur(14px); position: relative; z-index: 1; }
 .top-nav { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; letter-spacing: -.02em; }
-.brand-logo { width: 38px; height: 38px; }
-.brand strong, .brand small { display: block; }
-.brand strong { font-size: 1rem; }
-.brand small { margin-top: 1px; color: var(--muted); font-size: .69rem; letter-spacing: .12em; text-transform: uppercase; }
+.brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; letter-spacing: -.02em; }
+.brand-logo { height: 32px; width: auto; max-width: 140px; display: block; object-fit: contain; }
+.brand-divider { width: 1px; height: 18px; background: var(--line); }
+.brand-subtitle { color: var(--muted); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; }
 .portal-status { color: var(--muted); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
 .portal-status i { display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
 .hero { padding-top: clamp(90px, 14vw, 160px); padding-bottom: clamp(82px, 12vw, 140px); position: relative; }
@@ -61,10 +60,15 @@ h2 { margin-bottom: 0; font-size: clamp(1.7rem, 3vw, 2.5rem); letter-spacing: -.
 .info-label, .info-strip strong { display: block; }
 .info-label { margin-bottom: 7px; color: var(--faint); font-size: .62rem; }
 .info-strip strong { font-size: .85rem; font-weight: 500; }
+.empty-state { grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 60px 24px; background: linear-gradient(145deg, #0d0d0f, #060607); border: 1px dashed var(--line); border-radius: 8px; }
+.empty-state-icon { width: 50px; height: 50px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.03); border: 1px solid var(--line); color: var(--accent); margin-bottom: 18px; }
+.empty-state h3 { margin: 0 0 8px; font-size: 1.15rem; letter-spacing: -.03em; color: var(--text); }
+.empty-state p { margin: 0; max-width: 400px; color: var(--muted); font-size: .88rem; }
 .site-footer { border-top: 1px solid var(--line); }
-.footer-content { display: flex; justify-content: space-between; gap: 20px; padding: 27px 0; color: var(--muted); font-size: .72rem; }
+.footer-content { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 27px 0; color: var(--muted); font-size: .72rem; }
 .footer-content p { margin: 0; }
-.footer-brand { color: var(--text); font-weight: 700; letter-spacing: .12em; }
+.footer-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; letter-spacing: .12em; }
+.footer-logo { height: 18px; width: auto; opacity: .85; }
 .footer-brand span { color: var(--faint); font-weight: 400; }
-@media (max-width: 650px) { .container { width: min(100% - 28px, 1120px); } .portal-status { display: none; } .hero { padding-top: 90px; } h1 { font-size: clamp(3.2rem, 17vw, 5.2rem); } .section-heading { display: block; } .section-note { margin-top: 12px; text-align: left; } .info-strip { grid-template-columns: 1fr; } .info-strip > div { border-right: 0; border-bottom: 1px solid var(--line); } .info-strip > div:last-child { border-bottom: 0; } .footer-content { display: block; } .footer-content p { margin-top: 12px; } }
+@media (max-width: 650px) { .container { width: min(100% - 28px, 1120px); } .portal-status, .brand-divider, .brand-subtitle { display: none; } .hero { padding-top: 90px; } h1 { font-size: clamp(3.2rem, 17vw, 5.2rem); } .section-heading { display: block; } .section-note { margin-top: 12px; text-align: left; } .info-strip { grid-template-columns: 1fr; } .info-strip > div { border-right: 0; border-bottom: 1px solid var(--line); } .info-strip > div:last-child { border-bottom: 0; } .footer-content { display: block; } .footer-content p { margin-top: 12px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
