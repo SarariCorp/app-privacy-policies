@@ -7,7 +7,7 @@
   <meta name="description" content="The SarariCorp privacy policy dashboard for published mobile application policies.">
   <meta name="robots" content="index,follow">
   <link rel="icon" type="image/png" href="./assets/branding/sararicorp-logo.png">
-  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/styles.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -40,15 +40,23 @@
       </div>
       <div class="app-grid">
         <a class="app-card" href="./apps/glandatlas/">
-          <div class="app-card-top">
-            <img src="./apps/glandatlas/logo.png" alt="GlandAtlas logo">
-            <span class="card-index">01</span>
+          <div class="app-card-header">
+            <img src="./apps/glandatlas/logo.png" alt="GlandAtlas logo" class="card-app-logo" width="56" height="56">
+            <div class="card-title-wrap">
+              <div class="card-meta-line">
+                <span class="card-kicker">Application</span>
+                <span class="card-index">01</span>
+              </div>
+              <h3 class="card-title">GlandAtlas</h3>
+              <span class="card-package">com.sarari.glandatlas</span>
+            </div>
           </div>
           <div class="app-card-body">
-            <p class="card-kicker">Application &bull; com.sarari.glandatlas</p>
-            <h3>GlandAtlas</h3>
-            <p>Educational 3D human gland anatomy, histology, and spaced-repetition study application.</p>
-            <span class="card-link">View policy <b aria-hidden="true">&nearr;</b></span>
+            <p>Educational 3D human gland anatomy, histology, and spaced-repetition study application with cross-device sync.</p>
+            <div class="card-footer">
+              <span class="card-status-tag">Firebase &bull; Cloud Firestore</span>
+              <span class="card-link">View policy <b aria-hidden="true">&nearr;</b></span>
+            </div>
           </div>
         </a>
       </div>

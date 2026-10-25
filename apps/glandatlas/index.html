@@ -7,7 +7,49 @@
   <meta name="description" content="Official Privacy Policy for GlandAtlas (com.sarari.glandatlas), published by SarariCorp.">
   <meta name="robots" content="index,follow">
   <link rel="icon" type="image/png" href="../../assets/branding/sararicorp-logo.png">
-  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=2">
+  <style>
+    /* Scoped guarantees for policy page layout and typography */
+    .policy-page { padding-top: 40px; padding-bottom: 96px; max-width: 880px; margin-inline: auto; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); text-decoration: none; font-size: .84rem; letter-spacing: .04em; margin-bottom: 28px; transition: color .2s ease, transform .2s ease; }
+    .back-link:hover { color: var(--accent); transform: translateX(-3px); }
+    .app-head { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 32px; padding: 24px 28px; background: linear-gradient(145deg, #0e0e12, #070709); border: 1px solid var(--line); border-radius: 16px; }
+    .app-head-left { display: flex; align-items: center; gap: 20px; min-width: 0; }
+    .app-logo { width: 72px; height: 72px; min-width: 72px; max-width: 72px; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 4px 20px rgba(0,0,0,.6); object-fit: cover; display: block; flex-shrink: 0; }
+    .app-head-text { min-width: 0; }
+    .app-meta-tags { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
+    .app-head .eyebrow { margin: 0; font-size: .68rem; letter-spacing: .16em; }
+    .app-title { margin: 2px 0 6px; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -.04em; line-height: 1.15; color: var(--text); }
+    .policy-meta { margin: 0; color: var(--muted); font-size: .84rem; }
+    .app-head-badge { flex-shrink: 0; }
+    .badge-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; background: rgba(217, 255, 79, .08); border: 1px solid rgba(217, 255, 79, .3); color: var(--accent); font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+    .badge-pill::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+    .callout { padding: 20px 24px; margin: 28px 0; border-radius: 12px; border: 1px solid var(--line); background: rgba(255, 255, 255, .02); }
+    .callout strong { display: block; margin-bottom: 6px; font-size: .95rem; color: var(--text); }
+    .callout p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.6; }
+    .callout-highlight { background: rgba(217, 255, 79, .04); border-color: rgba(217, 255, 79, .25); }
+    .callout-highlight strong { color: var(--accent); }
+    .content-panel { background: linear-gradient(145deg, #0e0e11, #060607); border: 1px solid var(--line); border-radius: 16px; padding: 40px 36px; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+    .content-panel h2 { font-size: 1.28rem; margin-top: 38px; margin-bottom: 14px; letter-spacing: -.03em; color: var(--text); border-bottom: 1px solid rgba(255,255,255,.07); padding-bottom: 10px; }
+    .content-panel h2:first-of-type { margin-top: 0; }
+    .content-panel p { color: #c9c9ce; font-size: .95rem; line-height: 1.7; margin-bottom: 16px; }
+    .content-panel ul { color: #c9c9ce; padding-left: 22px; margin-bottom: 22px; }
+    .content-panel li { margin-bottom: 8px; line-height: 1.6; }
+    .content-panel li strong { color: var(--text); }
+    .table-wrap { overflow-x: auto; margin: 22px 0 28px; border: 1px solid var(--line); border-radius: 10px; background: rgba(0,0,0,.3); }
+    .policy-table { width: 100%; border-collapse: collapse; font-size: .88rem; text-align: left; }
+    .policy-table th, .policy-table td { padding: 14px 18px; border-bottom: 1px solid var(--line); }
+    .policy-table th { background: rgba(255,255,255,.04); color: var(--text); font-weight: 600; letter-spacing: .02em; }
+    .policy-table tr:last-child td { border-bottom: 0; }
+    .policy-table td { color: #c9c9ce; }
+    .tag-badge { display: inline-block; padding: 3px 8px; border-radius: 4px; background: rgba(217,255,79,.12); color: var(--accent); font-size: .72rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    @media (max-width: 650px) {
+      .app-head { flex-direction: column; align-items: flex-start; gap: 16px; padding: 20px; }
+      .app-head-left { flex-direction: row; align-items: center; gap: 16px; }
+      .app-logo { width: 60px; height: 60px; min-width: 60px; max-width: 60px; }
+      .content-panel { padding: 24px 18px; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -23,14 +65,22 @@
   </header>
 
   <main id="main-content" class="container policy-page">
-    <a class="back-link" href="../../">← Back to application directory</a>
+    <a class="back-link" href="../../">&larr; Back to application directory</a>
 
     <header class="app-head">
-      <img class="app-logo" src="./logo.png" alt="GlandAtlas app icon">
-      <div>
-        <p class="eyebrow">Application Policy / com.sarari.glandatlas</p>
-        <h1>GlandAtlas</h1>
-        <p class="policy-meta">Effective Date: October 25, 2026 &bull; Published by SarariCorp</p>
+      <div class="app-head-left">
+        <img class="app-logo" src="./logo.png" alt="GlandAtlas app icon" width="72" height="72">
+        <div class="app-head-text">
+          <div class="app-meta-tags">
+            <p class="eyebrow">Application Policy</p>
+            <span class="tag-badge">com.sarari.glandatlas</span>
+          </div>
+          <h1 class="app-title">GlandAtlas</h1>
+          <p class="policy-meta">Effective Date: October 25, 2026 &bull; Published by SarariCorp</p>
+        </div>
+      </div>
+      <div class="app-head-badge">
+        <span class="badge-pill">Google Play Verified</span>
       </div>
     </header>
 
