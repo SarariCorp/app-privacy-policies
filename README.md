@@ -15,13 +15,13 @@ The dashboard uses a pure black, space-inspired technology theme with subtle sta
 ```text
 .
 ├── assets/
-│   ├── branding/sararicorp-mark.svg
+│   ├── branding/sararicorp-logo.png
 │   └── css/styles.css
 ├── apps/
 │   ├── _template/
-│   └── example-app/
+│   └── glandatlas/
 │       ├── index.html
-│       └── logo.svg
+│       └── logo.png
 ├── index.html
 └── .github/workflows/deploy-pages.yml
 ```
