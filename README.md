@@ -19,7 +19,10 @@ The dashboard uses a pure black, space-inspired technology theme with subtle sta
 │   └── css/styles.css
 ├── apps/
 │   ├── _template/
-│   └── glandatlas/
+│   ├── glandatlas/
+│   │   ├── index.html
+│   │   └── logo.png
+│   └── royal-chess/
 │       ├── index.html
 │       └── logo.png
 ├── index.html
